@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const workoutRoutes = require('./routes/workouts');
-const Workout = require('./models/workoutModel');
+const userRoutes = require('./routes/user')
 
 //  Checks if the req has a body ( data ) ,
 // if yes then it parses it and attaches it to the REQ Object
@@ -19,6 +19,8 @@ app.use((req ,res ,next)=>{
 
 // Use Routes 
 app.use('/api/workouts',workoutRoutes);
+// User Routes 
+app.use('/api/user', userRoutes)
 
 // Connect to DB
 mongoose.connect(process.env.MONGO_URI)

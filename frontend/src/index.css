@@ -7,6 +7,8 @@ code {
 :root {
   --primary: #1aac83;
   --error: #e7195a;
+  --shadow-p: 0 0 5px rgb(96, 88, 88);
+  --shadow-s: 0 0 10px rgb(82, 74, 74);
 }
 
 body {
@@ -51,9 +53,11 @@ header a {
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgb(41, 41, 41);
+  box-shadow: var(--shadow-p);
 }
-
+.workout-details:hover {
+  box-shadow: var(--shadow-s);
+}
 .workout-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
@@ -100,9 +104,12 @@ form button {
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: var(--shadow-p);
 }
-
-div.error {
+form button:hover {
+  box-shadow: var(--shadow-s);
+}
+div .error {
   padding: 10px;
   background: #ffefef;
   border: 1px solid var(--error);
@@ -111,11 +118,11 @@ div.error {
   margin: 20px 0;
 }
 
-input.error {
+input .error {
   border: 1ps solid var(--error);
 }
 
-.delete {
+.material-symbols-outlined {
   
   color: #ddd;
   position: absolute;
@@ -127,7 +134,8 @@ input.error {
   background: #f60303;
 }
 
-.delete:hover {
-  background: #bc4141;
+.material-symbols-outlined:hover {
+  background: var(--error);
+  box-shadow: var(--shadow-s);
 }
 

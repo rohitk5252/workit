@@ -34,6 +34,7 @@ const handleSubmit = async (e) => {
         setLoad('')
         setReps('')
         setError(null)
+        setEmptyFields([])
         dispatch({type: 'CREATE_WORKOUT', payload: json})
         console.log('New Workout Added')
     }
