@@ -7,7 +7,7 @@ code {
 :root {
   --primary: #1aac83;
   --error: #e7195a;
-  --shadow-p: 0 0 5px rgb(96, 88, 88);
+  --shadow-p: 0 0 18px rgb(207, 195, 195);
   --shadow-s: 0 0 10px rgb(82, 74, 74);
 }
 
@@ -101,7 +101,7 @@ input {
   box-sizing: border-box;
 }
 
-form button {
+button {
   background-color: var(--primary);
   border: 0;
   color: #fff;
@@ -110,7 +110,8 @@ form button {
   cursor: pointer;
   box-shadow: var(--shadow-p);
 }
-form button:hover {
+
+button:hover {
   box-shadow: var(--shadow-s);
 }
 div .error {
@@ -142,3 +143,23 @@ input .error {
   box-shadow: var(--shadow-s);
 }
 
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 10px;
+}
+/* auth forms */
+form.signup h3, form.login h3 {
+  text-align: center;
+} 
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: var(--shadow-p);
+}
