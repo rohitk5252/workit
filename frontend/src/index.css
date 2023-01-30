@@ -123,6 +123,7 @@ input.error {
   right: 10px;
   border-radius: 3px;
   cursor: pointer;
+  border: none;
   background: #f60303;
 }
 
