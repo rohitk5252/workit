@@ -111,9 +111,20 @@ button {
   box-shadow: var(--shadow-p);
 }
 
+button.logout {
+  background-color: var(--error);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: var(--shadow-p);
+}
+
 button:hover {
   box-shadow: var(--shadow-s);
 }
+
 div .error {
   text-align: center;
   padding: 10px;
@@ -166,6 +177,7 @@ nav a {
 form.signup h3, form.login h3 {
   text-align: center;
 } 
+
 form.signup, form.login {
   max-width: 400px;
   margin: 40px auto;
